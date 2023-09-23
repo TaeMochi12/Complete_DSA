@@ -219,7 +219,7 @@ int main()
              << endl;
 
         cin >> option;
-        Node *n1 = new Node();
+        Node *n1 = new Node(); // DOUBTTTTTTTTTTTTTTTT
         switch (option)
         {
         case 0:
