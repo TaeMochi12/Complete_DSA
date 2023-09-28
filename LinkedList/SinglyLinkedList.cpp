@@ -123,7 +123,6 @@ public:
         if (head == NULL)
         {
             cout << "Singly Linked List already empty, can't delete anything" << endl;
-            ;
         }
         else if (head != NULL)
         {
@@ -193,9 +192,10 @@ public:
             Node *temp = head;
             while (temp != NULL)
             {
-                cout << "(" << temp->key << "," << temp->data << ")--> " << endl;
+                cout << "(" << temp->key << "," << temp->data << ")--> ";
                 temp = temp->next;
             }
+            cout<<endl;
         }
     }
 };
@@ -206,18 +206,20 @@ int main()
     SinglyLinkedList s;
     int option;
     int key1, k1, data1;
-    do
-    {
-        cout << "What operation do you want to perform? Select option number. Enter 0 to exit." << endl;
+    
         cout << "1.appendNode()" << endl;
         cout << "2.prependNode()" << endl;
         cout << "3.insertNodeAfter()" << endl;
         cout << "4.deleteNodeByKey()" << endl;
         cout << "5.updateNodeByKey()" << endl;
         cout << "6.print()" << endl;
-        cout << "7.Clear Screen" << endl
-             << endl;
+        cout << "7.nodeExists()" << endl;
+        cout << "8.Clear Screen" << endl;
 
+    do
+    {
+        cout << "What operation do you want to perform? Select option number. Enter 0 to exit." << endl;
+        
         cin >> option;
         Node *n1 = new Node(); // DOUBTTTTTTTTTTTTTTTT
         switch (option)
@@ -233,7 +235,7 @@ int main()
             s.appendNode(n1);
             break;
         case 2:
-            cout << "Prepend Node Operation\nEnter key and data of the Node to be appended" << endl;
+            cout << "Prepend Node Operation\nEnter key and data of the Node to be prepended" << endl;
             cin >> key1;
             cin >> data1;
             n1->key = key1;
@@ -265,6 +267,15 @@ int main()
             s.printList();
             break;
         case 7:
+            cout << "Enter the key of the node to be searched:" << endl;
+            cin >> key1;
+            n1 = s.nodeExists(key1);
+            if (n1 == NULL)
+                cout << "There is no node with the key value:" << key1 << endl;
+            else
+                cout << "The node with key value:" << key1 << " has data:" << n1->data << endl;
+            break;
+        case 8:
             system("cls");
             break;
         default:
