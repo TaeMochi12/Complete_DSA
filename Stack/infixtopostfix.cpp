@@ -43,8 +43,8 @@ string InfixToPostfix(stack<char> s, string infix)
         {
             while ((s.top() != '(') && (!s.empty()))
             {
-                char temp = s.top();
-                postfix += temp;
+                // char temp = s.top();
+                postfix += s.top();
                 s.pop();
             }
             if (s.top() == '(')
