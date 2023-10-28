@@ -23,7 +23,6 @@ public:
             return true;
         else
             return false;
-        ;
     }
     bool isFull()
     {
@@ -136,11 +135,11 @@ int main()
             cout << "Peek Function called-value at position:" << position << " is " << s1.peek(position) << endl;
             break;
         case 6:
-            cout << "Count Function called-Number if items in the stack are:" << s1.count() << endl;
+            cout << "Count Function called-Number of items in the stack are:" << s1.count() << endl;
             break;
         case 7:
             cout << "Change Function Called-";
-            cout << "Enter position of intem you want to change:";
+            cout << "Enter position of item you want to change:";
             cin >> position;
             cout << endl;
             cout << "Enter value of item you want to change:";

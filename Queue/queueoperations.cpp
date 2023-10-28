@@ -97,16 +97,18 @@ class Queue
 int main() {
     Queue q1;
     int option,value;
-    do
-    {
-        cout<<"What operations do you want to perform? Select Option number. Enter 0 to exit."<<endl;
+    
         cout<<"1. Enqueue()"<<endl;
         cout<<"2. Dequeue()"<<endl;
         cout<<"3. isEmpty()"<<endl;
         cout<<"4. isFull()"<<endl;
         cout<<"5. count()"<<endl;
         cout<<"6. display()"<<endl;
-        cout<<"7. Clear Screen"<<endl<<endl;
+        // cout<<"7. Clear Screen"<<endl<<endl;
+    
+    do
+    {
+        cout<<"What operations do you want to perform? Select Option number. Enter 0 to exit."<<endl;
 
         cin>>option;
         switch(option)
@@ -147,9 +149,9 @@ int main() {
             case 6:
                 q1.display();
                 break;
-            case 7:
-                system("cls");
-                break;
+            // case 7:
+            //     system("cls");
+            //     break;
             default:
                 cout<<"Enter an appropriate option number"<<endl;
         }
