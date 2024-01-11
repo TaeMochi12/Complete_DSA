@@ -104,7 +104,7 @@ int main() {
         cout<<"4. isFull()"<<endl;
         cout<<"5. count()"<<endl;
         cout<<"6. display()"<<endl;
-        // cout<<"7. Clear Screen"<<endl<<endl;
+        cout<<"7. Clear Screen"<<endl<<endl;
     
     do
     {
@@ -149,9 +149,9 @@ int main() {
             case 6:
                 q1.display();
                 break;
-            // case 7:
-            //     system("cls");
-            //     break;
+            case 7:
+                system("cls");
+                break;
             default:
                 cout<<"Enter an appropriate option number"<<endl;
         }
