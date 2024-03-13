@@ -1,18 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
-void BinarySearch(vector<int>arr,int start,int end,int target)
+int BinarySearch(vector<int>arr,int start,int end,int target)
 {
     if(start<=end){
         int mid=start+((end-start))/2;
-        if(arr[mid]==target) 
-        {
-            cout<<"Value found at index:"<<mid<<endl;
-        }
-        else if(target<arr[mid]) BinarySearch(arr,start,mid-1,target);
-        else BinarySearch(arr,mid+1,end,target);
+        if(arr[mid]==target) return mid;
+        else if(arr[mid]<target) return BinarySearch(arr,mid+1,end,target);
+        else return BinarySearch(arr,start,mid-1,target);
+        
     }
-    else cout<<"Element not found"<<endl;
+    return -1;
     
 }
 
@@ -29,6 +27,8 @@ int main() {
     int target;
     cout<<"Enter the target element:"<<endl;
     cin>>target;
-    BinarySearch(arr,0,n-1,target);
+    int ans=BinarySearch(arr,0,n-1,target);
+    if(ans==-1) cout<<"Element not found"<<endl;
+    else cout<<"Element found at index:"<<ans<<endl;
     return 0 ;
 }
