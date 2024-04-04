@@ -1,3 +1,5 @@
+// Lowerbound : Smallest number greater than or equal to the target element
+
 #include<bits/stdc++.h>
 using namespace std ;
 
