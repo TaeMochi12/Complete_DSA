@@ -7,7 +7,7 @@ int floor(int n,int arr[],int target)
 {
     int s=0;
     int e=n-1;
-    int ans=-1;
+    int ans=-1;   // if target is smaller than the last element of array then the floor index will be before the starting of the array
     while(s<=e)
     {
         int mid=s+(e-s)/2;

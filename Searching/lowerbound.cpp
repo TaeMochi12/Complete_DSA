@@ -7,7 +7,7 @@ int lowerbound(int n,int arr[],int target)
 {
     int s=0;
     int e=n-1;
-    int ans=-1;
+    int ans=n;   // if target is greater the last element of array then the lowerbound index will be out of the array
     while(s<=e)
     {
         int mid=s+(e-s)/2;
@@ -28,6 +28,5 @@ int main() {
     cin>>target;
     int ans=lowerbound(7,arr,target);
     if(ans!=-1) cout<<"Lowerbound of "<<target<<" found at index:"<<ans<<endl;
-    else cout<<"No lowerbound"<<endl;
     return 0 ;
 }
