@@ -1,4 +1,4 @@
-// floor : greatest number smaller or equal to the target element
+// ceil : smallest number greater or equal to the target element
 
 #include<bits/stdc++.h>
 using namespace std ;
