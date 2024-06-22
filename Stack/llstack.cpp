@@ -44,28 +44,24 @@ public:
     bool isEmpty()
     {
         // Write your code here
-        if (top != NULL)
-        {
-            return 0;
-        }
-        else
-            return 1;
+        return top==nullptr;
     }
 
     void push(int data)
     {
         // Write your code here
         Node *temp = new Node(data);
-        temp->data = data;
         temp->next = top;
         top = temp;
     }
 
     int pop()
     {
-        // Write your code here
+        if(top==NULL) return -1;
         int val=top->data;
+        Node* temp=top;
         top = top->next;
+        delete temp;
         return val;
     }
 
