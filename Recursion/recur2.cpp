@@ -9,7 +9,7 @@ int SumOfDigits(int n,int sum)
     if(n/10==0)
     {
         sum+=n;
-        return sum;
+        return sum; 
     }
     else return SumOfDigits(n/10,sum+n%10);
 }
